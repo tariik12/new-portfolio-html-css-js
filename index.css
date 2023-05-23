@@ -414,5 +414,74 @@ width: 15rem;
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
 
+}
+.skills_box .skills_content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills_box .skills_content:hover::before {
+    width: 100%;
+}
+.skills_content .progress{
+    padding: 1rem 0;
+}
+
+.skills_content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.skills_content .progress h3 span {
+    color: var(--text-color);
+}
+
+.skills_content .progress .bar{
+    height: .8rem;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.skills_content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+}
+
+.skills_column:nth-child(1) .skills_content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+.skills_column:nth-child(1) .skills_content .progress:nth-child(2) .bar span {
+    width: 85%;
+}
+.skills_column:nth-child(1) .skills_content .progress:nth-child(3) .bar span {
+    width: 90%;
+}
+.skills_column:nth-child(1) .skills_content .progress:nth-child(4) .bar span {
+    width: 65%;
+}
+.skills_column:nth-child(2) .skills_content .progress:nth-child(1) .bar span {
+    width: 95%;
+}
+.skills_column:nth-child(2) .skills_content .progress:nth-child(2) .bar span {
+    width: 75%;
+}
+.skills_column:nth-child(2) .skills_content .progress:nth-child(3) .bar span {
+    width: 80%;
+}
+.skills_column:nth-child(2) .skills_content .progress:nth-child(4) .bar span {
+    width: 65%;
 }
